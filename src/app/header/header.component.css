@@ -1,0 +1,52 @@
+.topnav {
+    margin-left: 160px;
+    overflow: hidden;
+    background-color: #444;
+    width: auto;
+    height: 75px;
+
+  }
+  
+  .logo{
+    width : 50px;
+    margin: 10px; 
+    }
+  
+  .brandname{
+    margin-top: auto;
+    margin-left: 5px; 
+  }
+  .part1
+  {
+    color: aliceblue;
+    font-size:30px;
+  }
+  .part2{
+    font-size:40px;
+    color: aliceblue;
+  }
+  
+  
+ 
+ 
+.chip { 
+    float: right;
+    margin-top: 10px;
+    margin-right: 16px;
+    margin-left:800px;
+    display: inline-block;
+    padding: 0 25px;
+    height: 50px;
+    font-size: 16px;
+    line-height: 50px;
+    border-radius: 25px;
+    background-color: #f1f1f1;
+  }
+  
+  .chip img {
+    float: left;
+    margin: 0 10px 0 -25px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+  }

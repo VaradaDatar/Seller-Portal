@@ -1,0 +1,139 @@
+<app-header></app-header>
+
+<app-dashboard></app-dashboard>
+<form #postForm="ngForm" (ngSubmit)="onCreatePost(postForm.value)" class="invent border border-dark col-lg-8 mx-auto center-block">
+    <h1>ADD INVENTORY</h1>
+    <!-- <div class="form-group">
+      <label for="InputCategory">Category</label>
+      <select class="form-control" placeholder="Select Product Category">
+          <option value="5ef89cbcc26bc0087070e02e">Men's</option>
+          <option value="5ef89cd1c26bc0087070e02f">Women's</option>
+          <option value="5ef89cdfc26bc0087070e030">Kid's</option>
+      </select>
+  </div> -->
+  <div class="form-group ">
+    <label for="InputProductName">Product Name</label>
+    <input type="Text" class="form-control" ngModel name="name" id="name"  placeholder="Enter Product Name"> 
+  </div>
+  <div class="form-group">
+    <label for="InputProductDesc">Product Description</label>
+  <textarea class="form-control" ngModel name="description" id="description" rows="3"></textarea>
+  </div>
+  <div class="form-group ">
+    <label for="InputProductName">Product Price</label>
+    <input type="Text" class="form-control" ngModel name="price" id="price"  placeholder="Enter Price"> 
+  </div>
+    <div class="form-group">
+        <label  for="InputCategory">Product Category</label>
+        <select ngModel name="category" id="category" class="form-control" placeholder="Select Product Category">
+            <option value="5ef99c48c65b8039b411c1ba">Bottom Wears</option>
+            <option value="5ef99c54c65b8039b411c1bb">Ethnic Wears</option>
+            <option value="5ef99c5dc65b8039b411c1bc">Dresses</option>
+            <option value="5ef99c67c65b8039b411c1bd">Accessories</option>
+            <option value="5ef99c6ec65b8039b411c1be">Bags</option>
+            <option value="5ef99c78c65b8039b411c1bf">FootWears</option>
+            <option value="5ef99c83c65b8039b411c1c0">Tops and Tees</option>
+            <option value="5ef99d0ec65b8039b411c1c8">jackets</option>
+            <option value="5ef9a389c65b8039b411c1c9">Casuals</option>
+            <option value="5ef9a394c65b8039b411c1ca">Party wears</option>
+            <option value="5ef9a3a1c65b8039b411c1cb">Traditionals</option>
+            <option value="5ef99cc6c65b8039b411c1c5">Men's formals</option>
+            <option value="5ef99ca0c65b8039b411c1c1">Men's T-Shirts</option>
+            <option value="5ef99cb9c65b8039b411c1c4">Men's Shorts</option>
+            <option value="5ef99ca7c65b8039b411c1c2">Men's Trousers</option>
+            <option value="5ef99cafc65b8039b411c1c3">Men's Jeans</option>
+            <option value="5ef99ccdc65b8039b411c1c6">Men's Shoes</option>
+            <option value="5ef99cf9c65b8039b411c1c7">Men's jackets and Sweaters</option>
+            
+        </select>
+    </div>
+  
+    <div class="form-group ">
+      <label for="InputProductName">Product Stock</label>
+      <input ngModel type="Text" class="form-control" name="stock" id="stock"  placeholder="Enter Stock"> 
+    </div>
+    <!-- <div class="form-group ">
+        <label for="InputSize">Available Sizes</label>
+        <input type="Text" class="form-control" id="InputSize"  placeholder="Enter Available Sizes"> 
+        <small id="InputSize" class="form-text text-muted">Seperate the sizes by entering "," between them.</small>
+      </div> -->
+    <div class="form-group">
+        <label for="exampleFormControlFile1">Product Images</label>
+        <input type="file" class="form-control-file" id="exampleFormControlFile1">
+        <small id="productImage" class="form-text text-muted">Add one image of your Product .</small>
+      </div>
+      <button ngSubmit type="submit" class="btn btn-primary btn-lg">Add to Inventory</button>
+  </form>
+<br>
+<hr>
+
+  <h1 class="invent">Inventory Table</h1>
+  <hr>
+  <br>
+  <br>
+
+  <table class="table table-hover table1 table-bordered border-dark">
+    <thead>
+      <tr>
+        <th scope="col">Sr. No.</th>
+        <th scope="col">Product Category</th>
+        <th scope="col">Product name</th>
+        <th scope="col">Available sizes</th>
+        <th class="col">Add Images </th>
+        <th scope="col">Product Descrition</th>
+        <th scope="col">Product Price</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Kurti</td>
+        <td>MELANGE Printed Angrakha Anarkali Kurti with 3/4 Sleeves</td>
+        <td>S, M, L, Xl</td>
+        <td><img  width="100px" height="100px" src="../../assets/inventory/kurti.jpg" alt=""></td>
+        <td>A traditional angrakha style with floral print makes this anarkali kurti a stylish pick for your wardrobe.
+            Wear it with wide palazzo pants and sandals for an elegant look.
+        </td>
+        <td>899/-</td>
+        <td><button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button></td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>T-Shirt</td>
+        <td>ADIDAS Printed T-shirt </td>
+        <td>S, M, L, Xl</td>
+        <td><img width="100px" height="100px" src="../../assets/inventory/tshirt.jpg" alt=""></td>
+        <td>Revamp your wardrobe with this chic top that has been tailored into a solid design with three striped lines at the back. The half sleeves and round neck add to the look, making sure that you can flaunt an eye-catching appearance. Team it up with a pair of trousers or shorts for a complete look.
+        </td>
+        <td>899/-</td>
+        <td><button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button></td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Men's Jeans</td>
+        <td>LOUIS PHILIPPE JEANS Stonewashed Slim Fit Jeans</td>
+        <td>S, M, L, Xl</td>
+        <td><img width="100px" height="100px" src="../../assets/inventory/jeans.jpg" alt=""></td>
+        <td>A pair of dark washed jeans, detailed with 5-pockets, button closure, zip fly and belt loops.
+            A basic polo t-shirt and sneakers with these jeans will ace your basic look.
+        </td>
+        <td>899/-</td>
+        <td><button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button></td>
+      </tr>
+      <tr>
+        <th scope="row">4</th>
+        <td>Shoes</td>
+        <td>REDTAPE ATHLEISURE Textured Lace-Up Sock-Knit Shoes </td>
+        <td>S, M, L, Xl</td>
+        <td><img width="100px" height="100px" src="../../assets/inventory/shoes.jpg" alt=""></td>
+        <td>This pair of athleisure shoes feature a textured surface design with sock-knit detailing and lace-up silhouette. The textured soles of this pair ensure superior grip.
+        </td>
+        <td>899/-</td>
+        <td><button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <app-footer></app-footer>
+

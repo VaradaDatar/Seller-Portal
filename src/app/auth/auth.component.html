@@ -1,0 +1,81 @@
+<div class="topnav">
+    <a class="navbar-brand" routerLink="/main">
+    <img class="logo" src="assets/e_logo.jpg" alt="">
+    <span class="brandname part1"><i><b>Dime</b></i></span>
+    <span class="brandname part2">shoppy</span>
+  </a>
+    <div class="login-container">
+      <form #myform="ngForm" (ngSubmit)="loginClicked(myform)" class="form-signin">
+        <input type="text" placeholder="Username" ngModel name="email">
+        <input type="text" placeholder="Password" ngModel name="password">
+        <button type="button" class="btn btn-info btn-lg" routerLink="/profile">Login</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="bg-img">
+    <form #postForm="ngForm" (ngSubmit)="onCreatePost(postForm.value)" class="container">
+      <h1>REGISTER</h1>
+  
+      <label for="gst"><b>GST No.</b></label>
+      <input type="text" placeholder="Enter GST No" ngModel name="GST" id="GST" required>
+
+      <label for="company"><b>Company Name</b></label>
+      <input type="text" placeholder="Enter Company Name" ngModel name="ShopName" id="ShopName" required>
+
+      <label for="contact"><b>Contact</b></label>
+      <input type="text" placeholder="Enter Contact No" ngModel name="contact" id="contact" required>
+
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" ngModel name="email" id="email" required>
+  
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" ngModel name="password" id="password" required>
+
+      <label for="psw"><b>Confirm Password</b></label>
+      <input type="password" placeholder="Re-Enter Password"  name="re_psw" id="re_psw" required>
+      <div class="custom-control custom-checkbox mb-3">
+        <input type="checkbox" class="custom-control-input" id="customCheck1">
+        <label class="custom-control-label" for="customCheck1">Remember password</label>
+      </div>
+      <button class="btn btn-lg btn-primary btn-block text-uppercase" ngSubmit type="submit" >Register</button>
+       </form>
+  </div>
+<br>
+<hr>
+<br>
+  <div class="row">
+    <div class="column">
+      <div class="card">
+        <p><i class="fa fa-user"></i></p>
+        <h3>11+</h3>
+        <p>Shops</p>
+      </div>
+    </div>
+    <div class="column">
+      <div class="card">
+        <p><i class="fa fa-check"></i></p>
+        <h3>55+</h3>
+        <p>Orders</p>
+      </div>
+    </div>
+    <div class="column">
+      <div class="card">
+        <p><i class="fa fa-smile-o"></i></p>
+        <h3>100+</h3>
+        <p>Happy Clients</p>
+      </div>
+    </div>
+    <div class="column">
+      <div class="card">
+        <p><i class="fa fa-coffee"></i></p>
+        <h3>100+</h3>
+        <p>Meetings</p>
+      </div>
+    </div>
+  </div>
+<br>
+<hr>
+<br>
+<app-footer></app-footer>
+ 
